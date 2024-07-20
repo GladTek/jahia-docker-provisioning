@@ -1,0 +1,12 @@
+# For more details about the provisioning API, you can refer to the Academy: https://academy.jahia.com/home
+# You can also find some details here: https://github.com/Jahia/jahia-private/blob/master/bundles/provisioning/README.md
+
+# Install LuXE NPM module and its prepackaged website
+- installBundle:
+    - 'npm:mvn:org.jahia.modules.npm/luxe-jahia-demo/0.2.0/tgz'
+    - 'mvn:org.jahia.modules/luxe-prepackaged-website'
+  autoStart: true
+  uninstallPreviousVersion: true
+
+# Import the LuXE website
+- importSite: "jar:mvn:org.jahia.modules/luxe-prepackaged-website/0.2.0/zip/import!/luxe.zip"
