@@ -1,0 +1,5 @@
+ - installOrUpgradeBundle: 
+   - url: 'mvn:org.jahia.modules/graphql-dxm-provider/2.20.0'
+   - url: 'mvn:org.jahia.modules/jcontent/2.15.0'
+   - url: 'mvn:org.jahia.modules/content-editor/4.8.0'
+   ignoreChecks: true 

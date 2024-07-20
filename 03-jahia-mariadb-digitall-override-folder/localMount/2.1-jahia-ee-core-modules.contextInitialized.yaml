@@ -1,0 +1,8 @@
+ - installOrUpgradeBundle: 
+   - url: 'mvn:org.jahia.modules/linkchecker/8.2.0'
+   - url: 'mvn:org.jahia.modules/advanced-visibility/8.0.0'
+   - url: 'mvn:org.jahia.modules/serverSettings-ee/9.3.0'
+   - url: 'mvn:org.jahia.modules/remotepublish/9.7.0'
+     if: "('${jahia:operatingMode}' == 'distantPublicationServer') || (org.jahia.osgi.BundleUtils.getBundleBySymbolicName(\"remotepublish\",null) != null)"
+   - url: 'mvn:org.jahia.modules/tools-ee/3.2.0'
+   ignoreChecks: true 
