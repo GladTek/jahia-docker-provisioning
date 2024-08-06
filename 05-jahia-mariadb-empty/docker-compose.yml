@@ -37,6 +37,5 @@ services:
       PROCESSING_SERVER: 'true'
       MAX_RAM_PERCENTAGE: 95
       SUPER_USER_PASSWORD : ${JAHIA_ROOT_PASSWORD}
-      EXECUTE_PROVISIONING_SCRIPT: 'https://raw.githubusercontent.com/GladTek/provisioning-tutorials/8.2/025-luxe-mariadb/provisioning.yaml'
 networks:
   stack:

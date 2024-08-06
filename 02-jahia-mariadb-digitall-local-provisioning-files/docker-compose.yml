@@ -16,6 +16,12 @@ services:
       MYSQL_PASSWORD: ${DB_PASSWORD}
   jahia:
     image: ${JAHIA_IMAGE}
+    volumes:
+      - type: bind
+        source: ./localMount/
+        target: /provisioning
+        bind:
+          create_host_path: true
     networks:
       - stack
     depends_on:
@@ -37,6 +43,6 @@ services:
       PROCESSING_SERVER: 'true'
       MAX_RAM_PERCENTAGE: 95
       SUPER_USER_PASSWORD : ${JAHIA_ROOT_PASSWORD}
-      EXECUTE_PROVISIONING_SCRIPT: 'https://raw.githubusercontent.com/GladTek/provisioning-tutorials/8.2/02-digitall-mariadb/provisioning.yaml'
+      EXECUTE_PROVISIONING_SCRIPT: ${EXECUTE_PROVISIONING_SCRIPT}
 networks:
   stack:

@@ -5,6 +5,7 @@
 - installBundle:
     - 'npm:mvn:org.jahia.modules.npm/luxe-jahia-demo/0.2.0/tgz'
     - 'mvn:org.jahia.modules/luxe-prepackaged-website'
+    - 'mvn:org.jahia.modules/content-reports/2.2.1'
   autoStart: true
   uninstallPreviousVersion: true
 

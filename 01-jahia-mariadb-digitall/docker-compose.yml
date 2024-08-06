@@ -1,0 +1,42 @@
+version: '3.9'
+services:
+  mariadb:
+    image: ${MARIADB_IMAGE}
+    deploy:
+      resources:
+        limits:
+          memory: 1gb
+    networks:
+      - stack
+    command: --max_allowed_packet=134217728 --transaction-isolation=READ-UNCOMMITTED --innodb-lock-wait-timeout=10
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+  jahia:
+    image: ${JAHIA_IMAGE}
+    networks:
+      - stack
+    depends_on:
+      - mariadb
+    ports:
+      - ${JAHIA_PORTS}
+    deploy:
+      resources:
+        limits:
+          memory: 4gb
+    environment:
+      DB_VENDOR : mariadb
+      DBMS_TYPE: mariadb
+      DB_HOST: mariadb
+      DB_NAME: ${DB_DATABASE}
+      DB_USER: ${DB_USER}
+      DB_PASS: ${DB_PASSWORD}
+      OPERATING_MODE: ${OPERATING_MODE}
+      PROCESSING_SERVER: 'true'
+      MAX_RAM_PERCENTAGE: 95
+      SUPER_USER_PASSWORD : ${JAHIA_ROOT_PASSWORD}
+      EXECUTE_PROVISIONING_SCRIPT: ${EXECUTE_PROVISIONING_SCRIPT}
+networks:
+  stack:
