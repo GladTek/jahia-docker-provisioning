@@ -1,14 +1,15 @@
-<a href="https://www.jahia.com/">
-    <img src="https://www.jahia.com/modules/jahiacom-templates/images/jahia-3x.png" alt="Jahia logo" title="Jahia" align="right" height="60" />
-</a>
+# Provisioning Samples (Not Official just customisation of the initial tutorial repository)
+Inspired and forked from https://github.com/Jahia/provisioning-tutorials
 
-# Provisioning Tutorials
+Those are customisations of the initial Provisioning Tutorials.
 
-Starting with version 8.0.3.0, Jahia comes with a provisioning API to facilitate the orchestration of Jahia environments. 
+What was added :
+- more variable configurations in `env` file.
+- provisioning in local folder to be sent to docker container for later provisioning instead of an url.
+- ability to override a yaml provisioning folder by your own.
 
-Its main objective is to automate the startup of complex environment starting from published Jahia releases. When using the provisioning API, Jahia will be able to reach "production" without requiring manual actions nor direct filesystem access to the Jahia environment.
-
-Primariraly aimed at containerized environments (i.e. Docker) this API is not tied to Docker and is also available on local Jahia installation.
+## K8S custom local manifests
+Kubernetes custom configuration manifests (to run those examples below) can be found in https://github.com/GladTek/jahia-k8s-provisioning
 
 ## In this repository
 
@@ -16,27 +17,40 @@ Each folder in this repository contains all the necessary elements to start a Ja
 
 These examples serve as proof-of-principles and are not meant at being used "as-is" for production environment.
 
-| Tutorial | Description |
-| --- | --- |
-| [00-start-jahia](./00-start-jahia/) | Start Jahia Enterprise with Docker |
-| [01-personal-api-tokens](./01-personal-api-tokens/) | With a local DerbyBD database, install the `Personal API Tokens` module and create a token |
-| [02-digitall-mariadb](./02-digitall-mariadb) | With a MariaDB database, install `Digitall` |
-| [03-augmented-search](./03-augmented-search) | Add an Elasticsearch single-node cluster, install and configure `Augmented-Search` for Digitall  |
-| [04-jexperience](./04-jexperience) | Install and configure `jExperience` |
+There are two branches
 
-__Reminder__: Jahia default root credentials are `root / root1234`.
+## Branch 8.1
+
+| Sample | Description |
+| --- | --- |
+| 01-jahia-mariadb-digitall | Jahia 8.1 with Maria DB and Digitall |
+| 02-jahia-mariadb-digitall-local-provisioning-files | the previous but with local provisioning files instead of online (with custom module installation)
+| 03-jahia-mariadb-digitall-override-folder | Example on how to override patches provisioning folder by a local folder **localMount**
+
+## Branch 8.2
+
+| Sample | Description |
+| --- | --- |
+| 01-jahia-mariadb-digitall | Jahia 8.2 with Maria DB and Digitall |
+| 02-jahia-mariadb-digitall-local-provisioning-files | the previous but with local provisioning files instead of online (with custom module installation)
+| 03-jahia-mariadb-digitall-override-folder | Example on how to override patches provisioning folder by a local folder **localMount**)
+| 04-jahia-mariadb-luxe | This will create an environment with a website based on an NPM module
+| 05-jahia-mariadb-empty | This will create a Jahia 8.2 environment with no website
+
+__Reminder__: Jahia root credentials are `root / WeLiveInATwilightWorld` for these Docker Compose (passwords and data are here for fun purpose only __change them__).
+
+## NB
+- __03-augmented-search__ and __04-jexperience__ examples are removed intentionally and temporarily since https://store.jahia.com/nexus/content/repositories/jahia-public-app-store@id=JahiaStore is not accessible for now. Will get back once resolved or changed
+
+- The original sources of this fork for Jahia is in branch **main-backup**
 
 ## Prerequisites
 
 In order to follow these tutorials you will need the Docker Engine installed on your machine. 
 
-These tutorials expose set ports (such as 8080), you will need to make sure these do not conflict with other resources you might have running on your machine.
+These tutorials expose set ports (such as 9000), you will need to make sure these do not conflict with other resources you might have running on your machine.
 
 __Note__: Please ensure that your Docker installation allows allocating up to 4GB of memory to a container. For MacOS users, in Docker go to Preferences>Advanced and set the memory limit to 4GB or more instead of the default 2GB.
-
-## Get started
-
-Ready to get started? If you're new to Jahia with Docker, you should begin with the [first tutorial](./00-start-jahia/).
 
 ## Documentation
 
