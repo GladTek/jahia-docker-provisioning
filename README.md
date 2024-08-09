@@ -10,6 +10,7 @@ Those are customisations of the initial Provisioning Tutorials
 | [03-jahia-mariadb-digitall-override-folder](./03-jahia-mariadb-digitall-override-folder/) | Example on how to override patches provisioning folder by a local folder [localMount](./03-jahia-mariadb-digitall-override-folder/localMount)
 | [04-jahia-mariadb-luxe](./04-jahia-mariadb-luxe/) | This will create an environment with a website based on an NPM module
 | [05-jahia-mariadb-empty](./05-jahia-mariadb-empty/) | This will create a Jahia 8.2 environment with no website
+| [06-jahia-mariadb-luxe-activate-pageComposer](./06-jahia-mariadb-luxe-activate-pageComposer/) | Like 04-jahia-mariadb-luxe but with the option to have `Page Composer activated also`
 
 
 **Passwords and Tokens here are just for fun.**

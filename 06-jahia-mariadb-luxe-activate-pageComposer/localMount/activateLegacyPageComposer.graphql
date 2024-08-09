@@ -1,0 +1,10 @@
+mutation { 
+  admin { 
+    jahia { 
+      configuration(pid:"org.jahia.modules.jcontent") {
+        pcHide: value(name:"hideLegacyPageComposer", value:"false") 
+        pbShow: value(name:"showPageBuilder", value:"true") 
+      }
+    } 
+  } 
+}
