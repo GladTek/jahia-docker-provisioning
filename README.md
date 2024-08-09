@@ -19,15 +19,7 @@ These examples serve as proof-of-principles and are not meant at being used "as-
 
 There are two branches
 
-## Branch 8.1
-
-| Sample | Description |
-| --- | --- |
-| 01-jahia-mariadb-digitall | Jahia 8.1 with Maria DB and Digitall |
-| 02-jahia-mariadb-digitall-local-provisioning-files | the previous but with local provisioning files instead of online (with custom module installation)
-| 03-jahia-mariadb-digitall-override-folder | Example on how to override patches provisioning folder by a local folder **localMount**
-
-## Branch 8.2
+## [Branch 8.2](https://github.com/GladTek/jahia-docker-provisioning/tree/8.2)
 
 | Sample | Description |
 | --- | --- |
@@ -36,6 +28,16 @@ There are two branches
 | 03-jahia-mariadb-digitall-override-folder | Example on how to override patches provisioning folder by a local folder **localMount**)
 | 04-jahia-mariadb-luxe | This will create an environment with a website based on an NPM module
 | 05-jahia-mariadb-empty | This will create a Jahia 8.2 environment with no website
+| 06-jahia-mariadb-luxe-activate-pageComposer | Like 04-jahia-mariadb-luxe but with the option to have `Page Composer activated also`
+
+## [Branch 8.1](https://github.com/GladTek/jahia-docker-provisioning/tree/8.1)
+
+| Sample | Description |
+| --- | --- |
+| 01-jahia-mariadb-digitall | Jahia 8.1 with Maria DB and Digitall |
+| 02-jahia-mariadb-digitall-local-provisioning-files | the previous but with local provisioning files instead of online (with custom module installation)
+| 03-jahia-mariadb-digitall-override-folder | Example on how to override patches provisioning folder by a local folder **localMount**
+
 
 __Reminder__: Jahia root credentials are `root / WeLiveInATwilightWorld` for these Docker Compose (passwords and data are here for fun purpose only __change them__).
 
