@@ -17,11 +17,7 @@ services:
   jahia:
     image: ${JAHIA_IMAGE}
     volumes:
-      - type: bind
-        source: ./localMount/
-        target: /provisioning
-        bind:
-          create_host_path: true
+      - ./localMount/:/usr/local/tomcat/digital-factory-data/patches/provisioning/
     networks:
       - stack
     depends_on:
