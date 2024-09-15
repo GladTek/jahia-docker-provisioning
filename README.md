@@ -5,6 +5,7 @@ Those are for saving **8.2.0** samples **(after the introduction of GraalVM and 
 Those are customisations of the initial Provisioning Tutorials
 | Sample | Description |
 | --- | --- |
+| [00-jahia-tenet-mariadb](./00-jahia-tenet-mariadb/) | Jahia 8.2 with Maria DB and a TENET sample Website |
 | [01-jahia-mariadb-digitall](./01-jahia-mariadb-digitall/) | Jahia 8.2 with Maria DB and Digitall |
 | [02-jahia-mariadb-digitall-local-provisioning-files](./02-jahia-mariadb-digitall-local-provisioning-files/) | the previous but with local provisioning files instead of online (with custom module installation)
 | [03-jahia-mariadb-digitall-override-folder](./03-jahia-mariadb-digitall-override-folder/) | Example on how to override patches provisioning folder by a local folder [localMount](./03-jahia-mariadb-digitall-override-folder/localMount)
